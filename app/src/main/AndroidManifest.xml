@@ -12,8 +12,7 @@
 
         <activity
             android:name=".BottomNavigationActivity"
-            android:exported="true"
-            android:label="@string/title_activity_bottom_navigation">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,6 +21,7 @@
         </activity>
 
         <activity
+            android:theme="@style/Theme.MyBand.NoActionBar"
             android:name=".ui.login.LoginActivity"
             android:exported="true"/>
 

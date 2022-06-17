@@ -1,22 +1,278 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:backgroundTint="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
-    <TextView
-        android:id="@+id/text_home"
+    <include layout="@layout/layout_home_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8sp"
-        android:layout_marginTop="8sp"
-        android:layout_marginEnd="8sp"
-        android:textAlignment="center"
-        android:textSize="@dimen/_20sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_180sdp" />
+
+
+                <LinearLayout
+                    android:id="@+id/dots_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_65sdp" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_marginTop="@dimen/_160sdp"
+                    android:layout_centerHorizontal="true"
+                    android:backgroundTint="@color/pink"
+                    app:cardCornerRadius="@dimen/_5sdp"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_50sdp">
+
+                    <LinearLayout
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_gravity="center_vertical"
+                            app:cardCornerRadius="@dimen/_17sdp"
+                            android:layout_width="@dimen/_37sdp"
+                            android:layout_height="@dimen/_37sdp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:gravity="center"
+                                    android:backgroundTint="#E2E2E2"
+                                    android:background="@drawable/ic_account_circle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+
+                                <ImageView
+                                    android:id="@+id/imgProfile"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop" />
+
+                            </RelativeLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            app:strokeWidth="@dimen/_1sdp"
+                            app:strokeColor="@color/hard_purple"
+                            android:layout_marginLeft="@dimen/_7sdp"
+                            android:layout_gravity="center_vertical"
+                            app:cardCornerRadius="@dimen/_5sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_25sdp">
+
+                            <LinearLayout
+                                android:paddingHorizontal="@dimen/_10sdp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:textColor="@color/hard_purple"
+                                    android:fontFamily="@font/sfprodisplay_regular"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Hai... "/>
+
+                                <TextView
+                                    android:id="@+id/tvUsername"
+                                    android:textColor="@color/hard_purple"
+                                    android:fontFamily="@font/sfprodisplay_regular"
+                                    android:textSize="@dimen/_10sdp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Coffemannnn_"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </RelativeLayout>
+
+            <com.google.android.material.card.MaterialCardView
+                app:cardBackgroundColor="#D5D6E0"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+<!--                    Horizontal Scroll View Relate                                      -->
+                    <RelativeLayout
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:fontFamily="@font/swis721_wgl4_bt"
+                            android:text="Relate"
+                            android:textColor="@color/hard_purple"
+                            android:textSize="@dimen/_20sdp" />
+
+                        <TextView
+                            android:drawableRight="@drawable/ic_arrow"
+                            android:gravity="center"
+                            android:drawablePadding="@dimen/_8sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:fontFamily="@font/swis721_wgl4_bt"
+                            android:text="Show More"
+                            android:textColor="@color/hard_purple"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </RelativeLayout>
+
+                    <HorizontalScrollView
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:scrollbars="none"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_relate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:itemCount="9"
+                                tools:listitem="@layout/item_product" />
+
+                        </RelativeLayout>
+
+                    </HorizontalScrollView>
+<!--                    Horizontal Scroll View Hots                                      -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:fontFamily="@font/swis721_wgl4_bt"
+                            android:text="Hots"
+                            android:textColor="@color/hard_purple"
+                            android:textSize="@dimen/_20sdp" />
+
+                        <TextView
+                            android:drawableRight="@drawable/ic_arrow"
+                            android:gravity="center"
+                            android:drawablePadding="@dimen/_8sdp"
+                            android:layout_width="wrap_content"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:fontFamily="@font/swis721_wgl4_bt"
+                            android:text="Show More"
+                            android:textColor="@color/hard_purple"
+                            android:textSize="@dimen/_12sdp" />
+
+                    </RelativeLayout>
+
+                    <HorizontalScrollView
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:scrollbars="none"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_hots"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                tools:itemCount="9"
+                                tools:listitem="@layout/item_product" />
+
+                        </RelativeLayout>
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_default"
+                android:paddingHorizontal="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="@dimen/_20sdp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                app:spanCount="2"
+                tools:itemCount="8"
+                tools:listitem="@layout/item_product_small"/>
+
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

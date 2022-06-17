@@ -10,7 +10,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.mrienaldi.myband.databinding.ActivityBottomNavigationBinding
-import com.mrienaldi.myband.ui.login.LoginActivity
+import com.mrienaldi.myband.ui.auth.LoginActivity
 import com.mrienaldi.myband.util.Prefs
 
 class BottomNavigationActivity : AppCompatActivity() {
@@ -26,25 +26,18 @@ class BottomNavigationActivity : AppCompatActivity() {
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_bottom_navigation)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications, R.id.navigation_wishlist, R.id.navigation_catagory
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
+
         navView.setupWithNavController(navController)
         navView.setOnItemSelectedListener {
 
             if (it.itemId == R.id.navigation_notifications){
-                val s = Prefs(this)
-                if (s.getIsLogin()){
+                if (Prefs.isLogin){
                     Log.d("TAG", "sudah login")
                     navController.navigate(it.itemId)
                 } else {
                     startActivity(Intent(this, LoginActivity::class.java))
                     Log.d("TAG", "belum login, pindah ke menu login")
+                    return@setOnItemSelectedListener false
                 }
 
             }else{

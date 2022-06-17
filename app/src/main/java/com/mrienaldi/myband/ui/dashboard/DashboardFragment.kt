@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.mrienaldi.myband.databinding.FragmentCatagoryBinding
 import com.mrienaldi.myband.databinding.FragmentDashboardBinding
+import com.mrienaldi.myband.ui.catagory.CatagoryViewModel
 
 class DashboardFragment : Fragment() {
 
@@ -28,7 +30,7 @@ class DashboardFragment : Fragment() {
         _binding = FragmentDashboardBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textDashboard
+        val textView: TextView = binding.textDasboard
         dashboardViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }

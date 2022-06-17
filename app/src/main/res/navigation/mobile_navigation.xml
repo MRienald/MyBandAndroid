@@ -31,7 +31,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.mrienaldi.myband.ui.notifications.NotificationsFragment"
+        android:name="com.mrienaldi.myband.ui.profile.ProfileFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_profile" />
 </navigation>

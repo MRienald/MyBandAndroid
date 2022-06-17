@@ -18,6 +18,7 @@
         android:theme="@style/Theme.MyBand">
 
         <activity
+            android:theme="@style/Theme.MyBand.NoActionBar"
             android:name=".BottomNavigationActivity"
             android:exported="true">
             <intent-filter>
@@ -29,12 +30,18 @@
 
         <activity
             android:theme="@style/Theme.MyBand.NoActionBar"
-            android:name=".ui.login.LoginActivity"
+            android:name=".ui.auth.LoginActivity"
             android:exported="true"/>
 
         <activity
             android:name=".MainActivity"
             android:exported="true"/>
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:theme="@style/Theme.MyBand.NoActionBar"/>
+        <activity
+            android:name=".ui.updateProfile.UpdateProfileActivity"
+            android:theme="@style/Theme.MyBand.NoActionBar"/>
 
     </application>
 

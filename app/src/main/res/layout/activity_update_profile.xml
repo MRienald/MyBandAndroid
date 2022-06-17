@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:backgroundTint="#FFFFFF"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:fitsSystemWindows="true"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:theme="@style/ThemeOverlay.AppCompat.Light"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:padding="@dimen/_3sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginVertical="@dimen/_15sdp"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="@dimen/_50sdp"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:gravity="center"
+                    android:backgroundTint="#E2E2E2"
+                    android:background="@drawable/ic_account_circle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:id="@+id/img_Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layoutatas"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeWidth="0sp"
+                    app:boxStrokeColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_username"
+                        android:background="@drawable/background_form"
+                        android:textColorHint="#797B8E"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Username"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/segoeui"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeWidth="0sp"
+                    app:boxStrokeColor="@color/white"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_name"
+                        android:background="@drawable/background_form"
+                        android:textColorHint="#797B8E"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Fullname"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/segoeui"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeWidth="0sp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:boxStrokeColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_email"
+                        android:inputType="textEmailAddress"
+                        android:background="@drawable/background_form"
+                        android:textColorHint="#797B8E"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email Address"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/segoeui"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeWidth="0sp"
+                    app:boxStrokeColor="@color/white"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_phone"
+                        android:inputType="phone"
+                        android:background="@drawable/background_form"
+                        android:textColorHint="#797B8E"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Phone Number"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/segoeui"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeWidth="0sp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:boxStrokeColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_Birthday"
+                        android:inputType="date"
+                        android:background="@drawable/background_form"
+                        android:textColorHint="#797B8E"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Birthday (dd/mm/yyyy)"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/segoeui"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    app:boxStrokeWidth="0sp"
+                    app:boxStrokeColor="@color/white"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_Address"
+                        android:background="@drawable/background_form"
+                        android:textColorHint="#797B8E"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        android:textSize="@dimen/_12sdp"
+                        android:fontFamily="@font/segoeui"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_marginTop="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_simpan"
+                    android:textAllCaps="false"
+                    android:text="Save"
+                    android:textSize="@dimen/_18sdp"
+                    android:textColor="#060930"
+                    android:fontFamily="@font/sfprodisplay_regular"
+                    android:background="@drawable/background_button"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_50sdp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pd"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

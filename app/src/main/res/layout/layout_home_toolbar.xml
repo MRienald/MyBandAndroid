@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/purple"
+    android:paddingVertical="@dimen/_8sdp"
+    android:paddingHorizontal="@dimen/_15sdp"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        app:strokeWidth="@dimen/_1sdp"
+        app:strokeColor="@color/medium_purple"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_toStartOf="@id/layout_icon"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:tint="@color/medium_purple"
+                android:src="@drawable/ic_search"/>
+
+            <TextView
+                android:textSize="@dimen/_10sdp"
+                android:text="Search ..."
+                android:fontFamily="@font/segoeui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:id="@+id/layout_icon"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            android:tint="@color/defaultcolor"
+            android:src="@drawable/ic_mesage"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:tint="@color/defaultcolor"
+            android:src="@drawable/ic_history"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_180sdp"/>
+
+    <LinearLayout
+        android:id="@+id/dots_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        android:padding="@dimen/_15sdp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginTop="@dimen/_160sdp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/pink"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_50sdp">
+
+        <LinearLayout
+            android:paddingHorizontal="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_gravity="center_vertical"
+                app:cardCornerRadius="@dimen/_17sdp"
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_37sdp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:gravity="center"
+                        android:backgroundTint="#E2E2E2"
+                        android:background="@drawable/ic_account_circle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <ImageView
+                        android:id="@+id/imgProfile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                app:strokeWidth="@dimen/_1sdp"
+                app:strokeColor="@color/hard_purple"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_gravity="center_vertical"
+                app:cardCornerRadius="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp">
+
+                <LinearLayout
+                    android:paddingHorizontal="@dimen/_10sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/hard_purple"
+                        android:fontFamily="@font/sfprodisplay_regular"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hai... "/>
+
+                    <TextView
+                        android:textColor="@color/hard_purple"
+                        android:fontFamily="@font/sfprodisplay_regular"
+                        android:textSize="@dimen/_10sdp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coffemannnn_"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>
